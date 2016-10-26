@@ -89,5 +89,7 @@ $route['default_controller'] = 'siteIndex';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['email'] = 'Email_Controller';
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

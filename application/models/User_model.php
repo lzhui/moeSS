@@ -397,7 +397,19 @@ class User_model extends CI_Model
                 $this->email->to($user->email);
                 $this->email->subject('Please verify your account');
                 $this->email->message('<a href="'.site_url("user/activate/$code").'" target="_blank">Click Here!</a>');
-                return $this->email->send();
+
+
+
+                if($this->email->send()){
+                    $res = "ok";
+                }else{
+                    $res = "faild";
+                }
+                return $res;
+                exit;
+
+//                return $this->email->send();
+
             }
         }
         else

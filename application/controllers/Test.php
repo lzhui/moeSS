@@ -8,8 +8,25 @@
  */
 class Test extends CI_Controller
 {
+
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model('user_model');
+        return;
+    }
+
     public function index() {
-        $this->load->view('test');
+
+
+
+
+        $username = 'wewrwerww';
+        $res = $this->user_model->send_active_email($username);
+        var_dump($res);
+
+
+//        $this->load->view('test');
 //        echo "Hello World!";
     }
 
